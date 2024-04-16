@@ -23,6 +23,12 @@ def login_page_render():
 def sign_up_page():
     return render_template('signup.html')
 
+@app.route('/reset_password', methods=['POST'])
+def reset_password():
+    # Codul pentru resetarea parolei va fi aici
+    return render_template('reset_password.html')
+
+
 # Configurația pentru Flask-Mail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
